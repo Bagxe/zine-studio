@@ -169,4 +169,13 @@ export const zh: Dict = {
   'ds.prev': '上一页',
   'ds.next': '下一页',
   'ds.flipEmpty': '加载小志 PDF 或页面图片以翻阅',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': '从设计编辑器导入',
+  'mz.editorReading': '正在读取设计编辑器中的页面…',
+  'mz.editorEmpty': '还没有来自编辑器的页面 — 请先在编辑器中设计页面，然后使用“发送到 Zine Studio”。',
+  'mz.editorOpen': '打开编辑器',
+  'mz.editorUnsupported': '浏览器存储（IndexedDB）不可用 — 无法读取编辑器中的页面。',
+  'mz.designHint': '还没有页面？',
+  'mz.designHintLink': '在 Zine Studio 编辑器中设计 →',
 }

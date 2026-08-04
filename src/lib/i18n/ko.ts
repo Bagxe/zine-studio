@@ -169,4 +169,13 @@ export const ko: Dict = {
   'ds.prev': '이전',
   'ds.next': '다음',
   'ds.flipEmpty': '진 PDF 또는 페이지 이미지를 불러와 넘겨보세요',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': '디자인 에디터에서 가져오기',
+  'mz.editorReading': '디자인 에디터에서 페이지를 읽는 중…',
+  'mz.editorEmpty': '에디터에서 보낸 페이지가 아직 없습니다 — 에디터에서 페이지를 디자인한 후 "Zine Studio로 보내기"를 사용하세요.',
+  'mz.editorOpen': '에디터 열기',
+  'mz.editorUnsupported': '브라우저 저장소(IndexedDB)를 사용할 수 없습니다 — 에디터 페이지를 읽을 수 없습니다.',
+  'mz.designHint': '아직 페이지가 없나요?',
+  'mz.designHintLink': 'Zine Studio 에디터에서 디자인하기 →',
 }

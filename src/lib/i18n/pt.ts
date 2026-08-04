@@ -169,4 +169,13 @@ export const pt: Dict = {
   'ds.prev': 'Anterior',
   'ds.next': 'Próxima',
   'ds.flipEmpty': 'Carregue um PDF de zine ou imagens para folhear',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': 'Importar do editor de design',
+  'mz.editorReading': 'Lendo páginas do editor de design…',
+  'mz.editorEmpty': 'Ainda não há páginas do editor — crie suas páginas lá e use "Enviar para o Zine Studio".',
+  'mz.editorOpen': 'Abrir o editor',
+  'mz.editorUnsupported': 'O armazenamento do navegador (IndexedDB) está indisponível — não foi possível ler as páginas do editor.',
+  'mz.designHint': 'Ainda não tem páginas?',
+  'mz.designHintLink': 'Crie-as no editor do Zine Studio →',
 }

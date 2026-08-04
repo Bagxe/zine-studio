@@ -179,6 +179,15 @@ export const en = {
   'ds.prev': 'Prev',
   'ds.next': 'Next',
   'ds.flipEmpty': 'Load a zine PDF or page images to flip through',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': 'Import from Design Editor',
+  'mz.editorReading': 'Reading pages from the Design Editor…',
+  'mz.editorEmpty': 'No pages from the editor yet — design your pages there, then use "Send to Zine Studio".',
+  'mz.editorOpen': 'Open the editor',
+  'mz.editorUnsupported': 'Browser storage (IndexedDB) is unavailable — cannot read pages from the editor.',
+  'mz.designHint': 'Don’t have pages yet?',
+  'mz.designHintLink': 'Design them in the Zine Studio editor →',
 } as const
 
 export type I18nKey = keyof typeof en

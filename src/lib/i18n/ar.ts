@@ -180,4 +180,13 @@ export const ar: Dict = {
   'ds.prev': 'السابق',
   'ds.next': 'التالي',
   'ds.flipEmpty': 'ارفع ملف PDF لزين أو صور صفحات لتتصفّحها',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': 'استيراد من محرر التصميم',
+  'mz.editorReading': 'قراءة الصفحات من محرر التصميم…',
+  'mz.editorEmpty': 'لا توجد صفحات من المحرر بعد — صمّم صفحاتك هناك ثم استخدم "أرسل إلى Zine Studio".',
+  'mz.editorOpen': 'افتح المحرر',
+  'mz.editorUnsupported': 'تخزين المتصفح (IndexedDB) غير متاح — لا يمكن قراءة صفحات المحرر.',
+  'mz.designHint': 'أليس لديك صفحات بعد؟',
+  'mz.designHintLink': 'صمّمها في محرر Zine Studio →',
 }

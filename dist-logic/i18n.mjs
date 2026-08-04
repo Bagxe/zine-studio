@@ -169,7 +169,15 @@ var en = {
   "ds.flipTitle": "05 / Flip-through",
   "ds.prev": "Prev",
   "ds.next": "Next",
-  "ds.flipEmpty": "Load a zine PDF or page images to flip through"
+  "ds.flipEmpty": "Load a zine PDF or page images to flip through",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "Import from Design Editor",
+  "mz.editorReading": "Reading pages from the Design Editor\u2026",
+  "mz.editorEmpty": 'No pages from the editor yet \u2014 design your pages there, then use "Send to Zine Studio".',
+  "mz.editorOpen": "Open the editor",
+  "mz.editorUnsupported": "Browser storage (IndexedDB) is unavailable \u2014 cannot read pages from the editor.",
+  "mz.designHint": "Don\u2019t have pages yet?",
+  "mz.designHintLink": "Design them in the Zine Studio editor \u2192"
 };
 
 // src/lib/i18n/es.ts
@@ -338,7 +346,15 @@ var es = {
   "ds.flipTitle": "05 / Hojear",
   "ds.prev": "Atr\xE1s",
   "ds.next": "Siguiente",
-  "ds.flipEmpty": "Carga un PDF de zine o im\xE1genes para hojear"
+  "ds.flipEmpty": "Carga un PDF de zine o im\xE1genes para hojear",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "Importar desde el editor de dise\xF1o",
+  "mz.editorReading": "Leyendo p\xE1ginas del editor de dise\xF1o\u2026",
+  "mz.editorEmpty": 'A\xFAn no hay p\xE1ginas del editor \u2014 dise\xF1a tus p\xE1ginas all\xED y usa "Enviar a Zine Studio".',
+  "mz.editorOpen": "Abrir el editor",
+  "mz.editorUnsupported": "El almacenamiento del navegador (IndexedDB) no est\xE1 disponible \u2014 no se pueden leer las p\xE1ginas del editor.",
+  "mz.designHint": "\xBFA\xFAn no tienes p\xE1ginas?",
+  "mz.designHintLink": "Dise\xF1arlas en el editor de Zine Studio \u2192"
 };
 
 // src/lib/i18n/pt.ts
@@ -507,7 +523,15 @@ var pt = {
   "ds.flipTitle": "05 / Folhear",
   "ds.prev": "Anterior",
   "ds.next": "Pr\xF3xima",
-  "ds.flipEmpty": "Carregue um PDF de zine ou imagens para folhear"
+  "ds.flipEmpty": "Carregue um PDF de zine ou imagens para folhear",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "Importar do editor de design",
+  "mz.editorReading": "Lendo p\xE1ginas do editor de design\u2026",
+  "mz.editorEmpty": 'Ainda n\xE3o h\xE1 p\xE1ginas do editor \u2014 crie suas p\xE1ginas l\xE1 e use "Enviar para o Zine Studio".',
+  "mz.editorOpen": "Abrir o editor",
+  "mz.editorUnsupported": "O armazenamento do navegador (IndexedDB) est\xE1 indispon\xEDvel \u2014 n\xE3o foi poss\xEDvel ler as p\xE1ginas do editor.",
+  "mz.designHint": "Ainda n\xE3o tem p\xE1ginas?",
+  "mz.designHintLink": "Crie-as no editor do Zine Studio \u2192"
 };
 
 // src/lib/i18n/fr.ts
@@ -676,7 +700,15 @@ var fr = {
   "ds.flipTitle": "05 / Feuilleter",
   "ds.prev": "Pr\xE9c.",
   "ds.next": "Suiv.",
-  "ds.flipEmpty": "Chargez un PDF de zine ou des images pour feuilleter"
+  "ds.flipEmpty": "Chargez un PDF de zine ou des images pour feuilleter",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "Importer depuis l\u2019\xE9diteur de design",
+  "mz.editorReading": "Lecture des pages de l\u2019\xE9diteur de design\u2026",
+  "mz.editorEmpty": "Pas encore de pages de l\u2019\xE9diteur \u2014 concevez vos pages l\xE0-bas, puis utilisez \xAB Envoyer vers Zine Studio \xBB.",
+  "mz.editorOpen": "Ouvrir l\u2019\xE9diteur",
+  "mz.editorUnsupported": "Le stockage du navigateur (IndexedDB) est indisponible \u2014 impossible de lire les pages de l\u2019\xE9diteur.",
+  "mz.designHint": "Pas encore de pages ?",
+  "mz.designHintLink": "Concevez-les dans l\u2019\xE9diteur de Zine Studio \u2192"
 };
 
 // src/lib/i18n/de.ts
@@ -845,7 +877,15 @@ var de = {
   "ds.flipTitle": "05 / Durchbl\xE4ttern",
   "ds.prev": "Zur\xFCck",
   "ds.next": "Weiter",
-  "ds.flipEmpty": "Lade ein Zine-PDF oder Seitenbilder zum Durchbl\xE4ttern"
+  "ds.flipEmpty": "Lade ein Zine-PDF oder Seitenbilder zum Durchbl\xE4ttern",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "Aus dem Design-Editor importieren",
+  "mz.editorReading": "Seiten aus dem Design-Editor werden gelesen\u2026",
+  "mz.editorEmpty": "Noch keine Seiten aus dem Editor \u2014 gestalte deine Seiten dort und nutze \u201EAn Zine Studio senden\u201C.",
+  "mz.editorOpen": "Editor \xF6ffnen",
+  "mz.editorUnsupported": "Browserspeicher (IndexedDB) ist nicht verf\xFCgbar \u2014 Seiten aus dem Editor k\xF6nnen nicht gelesen werden.",
+  "mz.designHint": "Noch keine Seiten?",
+  "mz.designHintLink": "Gestalte sie im Zine-Studio-Editor \u2192"
 };
 
 // src/lib/i18n/zh.ts
@@ -1014,7 +1054,15 @@ var zh = {
   "ds.flipTitle": "05 / \u7FFB\u9605",
   "ds.prev": "\u4E0A\u4E00\u9875",
   "ds.next": "\u4E0B\u4E00\u9875",
-  "ds.flipEmpty": "\u52A0\u8F7D\u5C0F\u5FD7 PDF \u6216\u9875\u9762\u56FE\u7247\u4EE5\u7FFB\u9605"
+  "ds.flipEmpty": "\u52A0\u8F7D\u5C0F\u5FD7 PDF \u6216\u9875\u9762\u56FE\u7247\u4EE5\u7FFB\u9605",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "\u4ECE\u8BBE\u8BA1\u7F16\u8F91\u5668\u5BFC\u5165",
+  "mz.editorReading": "\u6B63\u5728\u8BFB\u53D6\u8BBE\u8BA1\u7F16\u8F91\u5668\u4E2D\u7684\u9875\u9762\u2026",
+  "mz.editorEmpty": "\u8FD8\u6CA1\u6709\u6765\u81EA\u7F16\u8F91\u5668\u7684\u9875\u9762 \u2014 \u8BF7\u5148\u5728\u7F16\u8F91\u5668\u4E2D\u8BBE\u8BA1\u9875\u9762\uFF0C\u7136\u540E\u4F7F\u7528\u201C\u53D1\u9001\u5230 Zine Studio\u201D\u3002",
+  "mz.editorOpen": "\u6253\u5F00\u7F16\u8F91\u5668",
+  "mz.editorUnsupported": "\u6D4F\u89C8\u5668\u5B58\u50A8\uFF08IndexedDB\uFF09\u4E0D\u53EF\u7528 \u2014 \u65E0\u6CD5\u8BFB\u53D6\u7F16\u8F91\u5668\u4E2D\u7684\u9875\u9762\u3002",
+  "mz.designHint": "\u8FD8\u6CA1\u6709\u9875\u9762\uFF1F",
+  "mz.designHintLink": "\u5728 Zine Studio \u7F16\u8F91\u5668\u4E2D\u8BBE\u8BA1 \u2192"
 };
 
 // src/lib/i18n/ja.ts
@@ -1183,7 +1231,15 @@ var ja = {
   "ds.flipTitle": "05 / \u3081\u304F\u3063\u3066\u898B\u308B",
   "ds.prev": "\u524D\u3078",
   "ds.next": "\u6B21\u3078",
-  "ds.flipEmpty": "\u30B8\u30F3\u306E PDF \u307E\u305F\u306F\u30DA\u30FC\u30B8\u753B\u50CF\u3092\u8AAD\u307F\u8FBC\u3080\u3068\u3081\u304F\u3063\u3066\u898B\u3089\u308C\u307E\u3059"
+  "ds.flipEmpty": "\u30B8\u30F3\u306E PDF \u307E\u305F\u306F\u30DA\u30FC\u30B8\u753B\u50CF\u3092\u8AAD\u307F\u8FBC\u3080\u3068\u3081\u304F\u3063\u3066\u898B\u3089\u308C\u307E\u3059",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "\u30C7\u30B6\u30A4\u30F3\u30A8\u30C7\u30A3\u30BF\u30FC\u304B\u3089\u30A4\u30F3\u30DD\u30FC\u30C8",
+  "mz.editorReading": "\u30C7\u30B6\u30A4\u30F3\u30A8\u30C7\u30A3\u30BF\u30FC\u304B\u3089\u30DA\u30FC\u30B8\u3092\u8AAD\u307F\u8FBC\u3093\u3067\u3044\u307E\u3059\u2026",
+  "mz.editorEmpty": "\u30A8\u30C7\u30A3\u30BF\u30FC\u304B\u3089\u306E\u30DA\u30FC\u30B8\u304C\u307E\u3060\u3042\u308A\u307E\u305B\u3093 \u2014 \u30A8\u30C7\u30A3\u30BF\u30FC\u3067\u30DA\u30FC\u30B8\u3092\u30C7\u30B6\u30A4\u30F3\u3057\u3001\u300CZine Studio \u306B\u9001\u308B\u300D\u3092\u4F7F\u3063\u3066\u304F\u3060\u3055\u3044\u3002",
+  "mz.editorOpen": "\u30A8\u30C7\u30A3\u30BF\u30FC\u3092\u958B\u304F",
+  "mz.editorUnsupported": "\u30D6\u30E9\u30A6\u30B6\u306E\u30B9\u30C8\u30EC\u30FC\u30B8\uFF08IndexedDB\uFF09\u304C\u5229\u7528\u3067\u304D\u307E\u305B\u3093 \u2014 \u30A8\u30C7\u30A3\u30BF\u30FC\u306E\u30DA\u30FC\u30B8\u3092\u8AAD\u307F\u8FBC\u3081\u307E\u305B\u3093\u3002",
+  "mz.designHint": "\u307E\u3060\u30DA\u30FC\u30B8\u304C\u3042\u308A\u307E\u305B\u3093\u304B\uFF1F",
+  "mz.designHintLink": "Zine Studio \u30A8\u30C7\u30A3\u30BF\u30FC\u3067\u30C7\u30B6\u30A4\u30F3 \u2192"
 };
 
 // src/lib/i18n/ko.ts
@@ -1352,7 +1408,15 @@ var ko = {
   "ds.flipTitle": "05 / \uB118\uACA8\uBCF4\uAE30",
   "ds.prev": "\uC774\uC804",
   "ds.next": "\uB2E4\uC74C",
-  "ds.flipEmpty": "\uC9C4 PDF \uB610\uB294 \uD398\uC774\uC9C0 \uC774\uBBF8\uC9C0\uB97C \uBD88\uB7EC\uC640 \uB118\uACA8\uBCF4\uC138\uC694"
+  "ds.flipEmpty": "\uC9C4 PDF \uB610\uB294 \uD398\uC774\uC9C0 \uC774\uBBF8\uC9C0\uB97C \uBD88\uB7EC\uC640 \uB118\uACA8\uBCF4\uC138\uC694",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "\uB514\uC790\uC778 \uC5D0\uB514\uD130\uC5D0\uC11C \uAC00\uC838\uC624\uAE30",
+  "mz.editorReading": "\uB514\uC790\uC778 \uC5D0\uB514\uD130\uC5D0\uC11C \uD398\uC774\uC9C0\uB97C \uC77D\uB294 \uC911\u2026",
+  "mz.editorEmpty": '\uC5D0\uB514\uD130\uC5D0\uC11C \uBCF4\uB0B8 \uD398\uC774\uC9C0\uAC00 \uC544\uC9C1 \uC5C6\uC2B5\uB2C8\uB2E4 \u2014 \uC5D0\uB514\uD130\uC5D0\uC11C \uD398\uC774\uC9C0\uB97C \uB514\uC790\uC778\uD55C \uD6C4 "Zine Studio\uB85C \uBCF4\uB0B4\uAE30"\uB97C \uC0AC\uC6A9\uD558\uC138\uC694.',
+  "mz.editorOpen": "\uC5D0\uB514\uD130 \uC5F4\uAE30",
+  "mz.editorUnsupported": "\uBE0C\uB77C\uC6B0\uC800 \uC800\uC7A5\uC18C(IndexedDB)\uB97C \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4 \u2014 \uC5D0\uB514\uD130 \uD398\uC774\uC9C0\uB97C \uC77D\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.",
+  "mz.designHint": "\uC544\uC9C1 \uD398\uC774\uC9C0\uAC00 \uC5C6\uB098\uC694?",
+  "mz.designHintLink": "Zine Studio \uC5D0\uB514\uD130\uC5D0\uC11C \uB514\uC790\uC778\uD558\uAE30 \u2192"
 };
 
 // src/lib/i18n/ar.ts
@@ -1526,7 +1590,15 @@ var ar = {
   "ds.flipTitle": "05 / \u062A\u0635\u0641\u0651\u062D",
   "ds.prev": "\u0627\u0644\u0633\u0627\u0628\u0642",
   "ds.next": "\u0627\u0644\u062A\u0627\u0644\u064A",
-  "ds.flipEmpty": "\u0627\u0631\u0641\u0639 \u0645\u0644\u0641 PDF \u0644\u0632\u064A\u0646 \u0623\u0648 \u0635\u0648\u0631 \u0635\u0641\u062D\u0627\u062A \u0644\u062A\u062A\u0635\u0641\u0651\u062D\u0647\u0627"
+  "ds.flipEmpty": "\u0627\u0631\u0641\u0639 \u0645\u0644\u0641 PDF \u0644\u0632\u064A\u0646 \u0623\u0648 \u0635\u0648\u0631 \u0635\u0641\u062D\u0627\u062A \u0644\u062A\u062A\u0635\u0641\u0651\u062D\u0647\u0627",
+  // ── Design Editor handoff ─────────────────────────────────────────
+  "mz.importEditor": "\u0627\u0633\u062A\u064A\u0631\u0627\u062F \u0645\u0646 \u0645\u062D\u0631\u0631 \u0627\u0644\u062A\u0635\u0645\u064A\u0645",
+  "mz.editorReading": "\u0642\u0631\u0627\u0621\u0629 \u0627\u0644\u0635\u0641\u062D\u0627\u062A \u0645\u0646 \u0645\u062D\u0631\u0631 \u0627\u0644\u062A\u0635\u0645\u064A\u0645\u2026",
+  "mz.editorEmpty": '\u0644\u0627 \u062A\u0648\u062C\u062F \u0635\u0641\u062D\u0627\u062A \u0645\u0646 \u0627\u0644\u0645\u062D\u0631\u0631 \u0628\u0639\u062F \u2014 \u0635\u0645\u0651\u0645 \u0635\u0641\u062D\u0627\u062A\u0643 \u0647\u0646\u0627\u0643 \u062B\u0645 \u0627\u0633\u062A\u062E\u062F\u0645 "\u0623\u0631\u0633\u0644 \u0625\u0644\u0649 Zine Studio".',
+  "mz.editorOpen": "\u0627\u0641\u062A\u062D \u0627\u0644\u0645\u062D\u0631\u0631",
+  "mz.editorUnsupported": "\u062A\u062E\u0632\u064A\u0646 \u0627\u0644\u0645\u062A\u0635\u0641\u062D (IndexedDB) \u063A\u064A\u0631 \u0645\u062A\u0627\u062D \u2014 \u0644\u0627 \u064A\u0645\u0643\u0646 \u0642\u0631\u0627\u0621\u0629 \u0635\u0641\u062D\u0627\u062A \u0627\u0644\u0645\u062D\u0631\u0631.",
+  "mz.designHint": "\u0623\u0644\u064A\u0633 \u0644\u062F\u064A\u0643 \u0635\u0641\u062D\u0627\u062A \u0628\u0639\u062F\u061F",
+  "mz.designHintLink": "\u0635\u0645\u0651\u0645\u0647\u0627 \u0641\u064A \u0645\u062D\u0631\u0631 Zine Studio \u2192"
 };
 
 // src/lib/i18n/index.ts

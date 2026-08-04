@@ -169,4 +169,13 @@ export const ja: Dict = {
   'ds.prev': '前へ',
   'ds.next': '次へ',
   'ds.flipEmpty': 'ジンの PDF またはページ画像を読み込むとめくって見られます',
+
+  // ── Design Editor handoff ─────────────────────────────────────────
+  'mz.importEditor': 'デザインエディターからインポート',
+  'mz.editorReading': 'デザインエディターからページを読み込んでいます…',
+  'mz.editorEmpty': 'エディターからのページがまだありません — エディターでページをデザインし、「Zine Studio に送る」を使ってください。',
+  'mz.editorOpen': 'エディターを開く',
+  'mz.editorUnsupported': 'ブラウザのストレージ（IndexedDB）が利用できません — エディターのページを読み込めません。',
+  'mz.designHint': 'まだページがありませんか？',
+  'mz.designHintLink': 'Zine Studio エディターでデザイン →',
 }

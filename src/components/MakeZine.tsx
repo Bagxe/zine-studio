@@ -6,7 +6,7 @@ import { Switch } from '@/components/ui/switch'
 import { Slider } from '@/components/ui/slider'
 import { Separator } from '@/components/ui/separator'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Download, ChevronDown, ChevronUp, GripVertical, ImagePlus, Trash2, X } from 'lucide-react'
+import { Download, ChevronDown, ChevronUp, GripVertical, ImagePlus, Import, Trash2, X } from 'lucide-react'
 import {
   expandFiles,
   fromClipboard,
@@ -40,6 +40,7 @@ import { moveItem } from '@/lib/manualArrange'
 import { nudgeTarget } from '@/lib/reorder'
 import { usePointerReorder } from '@/lib/usePointerReorder'
 import { defaultFromCarousel, withSuffix } from '@/lib/naming'
+import { EDITOR_URL, handoffRecordsToFiles, readHandoffPages } from '@/lib/handoff'
 import { useI18n } from '@/lib/i18n'
 import type { I18nKey } from '@/lib/i18n/index'
 import { Input } from '@/components/ui/input'
@@ -93,6 +94,8 @@ export default function MakeZine() {
   const [rejected, setRejected] = useState<string[]>([])
   const [intakeNotes, setIntakeNotes] = useState<string[]>([])
   const [retryTick, setRetryTick] = useState(0)
+  /** Design-Editor handoff feedback: 'empty' | 'unsupported', else null. */
+  const [handoffNote, setHandoffNote] = useState<'empty' | 'unsupported' | null>(null)
 
   const fileInput = useRef<HTMLInputElement>(null)
   const folderInput = useRef<HTMLInputElement>(null)
@@ -132,6 +135,39 @@ export default function MakeZine() {
       setStatusMsg(err instanceof Error ? err.message : String(err))
     })
   }
+
+  /**
+   * Import pages exported by the companion design editor (IndexedDB handoff).
+   * Files go through the exact same intake pipeline as uploads; the editor
+   * keeps owning the DB — we never delete or consume it.
+   */
+  const importFromEditor = useCallback(async () => {
+    setHandoffNote(null)
+    setStatusMsg(t('mz.editorReading'))
+    const r = await readHandoffPages()
+    if (r.kind === 'ok') {
+      handleIntake(expandFiles(handoffRecordsToFiles(r.records), intakeDeps))
+    } else {
+      setStatusMsg('')
+      setHandoffNote(r.kind)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t])
+
+  // ?from=editor (the editor's "Open Zine Studio →" link): auto-import once
+  // on startup, then strip the param so refreshes don't re-trigger.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('from') !== 'editor') return
+    params.delete('from')
+    const qs = params.toString()
+    window.history.replaceState(
+      null,
+      '',
+      window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash,
+    )
+    importFromEditor()
+  }, [importFromEditor])
 
   useEffect(() => {
     const onPaste = (ev: ClipboardEvent) => {
@@ -386,6 +422,26 @@ export default function MakeZine() {
               e.target.value = ''
             }}
           />
+          <button
+            className="mt-2 flex w-full items-center justify-center gap-2 border border-black px-3 py-2 font-mono text-xs uppercase tracking-wide transition-colors hover:bg-black hover:text-white"
+            onClick={importFromEditor}
+          >
+            <Import className="h-3.5 w-3.5" /> {t('mz.importEditor')}
+          </button>
+          {handoffNote && (
+            <p className="mt-2 border-s-2 border-amber-500 bg-amber-50 p-2 font-mono text-[11px] leading-snug text-amber-900">
+              {handoffNote === 'unsupported' ? t('mz.editorUnsupported') : t('mz.editorEmpty')}{' '}
+              <a href={EDITOR_URL} target="_blank" rel="noopener" className="underline hover:text-black">
+                {t('mz.editorOpen')}
+              </a>
+            </p>
+          )}
+          <p className="mt-2 text-[11px] text-neutral-500">
+            {t('mz.designHint')}{' '}
+            <a href={EDITOR_URL} target="_blank" rel="noopener" className="underline hover:text-black">
+              {t('mz.designHintLink')}
+            </a>
+          </p>
           {images.length > 0 && (
             <button
               className="mt-2 flex items-center font-mono text-[11px] uppercase tracking-wide text-neutral-500 underline hover:text-red-600"

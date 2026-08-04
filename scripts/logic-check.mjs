@@ -28,6 +28,7 @@ import {
 } from '../dist-logic/manualArrange.mjs'
 import { paddingHint } from '../dist-logic/paddingHint.mjs'
 import { DICTS, LANGS, detectLang, fmt, translate } from '../dist-logic/i18n.mjs'
+import { handoffRecordsToFiles, handoffFallbackName } from '../dist-logic/handoff.mjs'
 import { nudgeTarget } from '../dist-logic/reorder.mjs'
 
 let failures = 0
@@ -777,6 +778,37 @@ check('i18n: translate uses locale, falls back to en, echoes key', [
   translate('fr', 'common.gridFmt', { rows: 2, cols: 4 }),
   translate('en', 'mz.intakeTitle') !== DICTS.ko['mz.intakeTitle'], // sanity: ko differs from en
 ], [DICTS.ko['mz.intakeTitle'], fmt(DICTS.fr['common.gridFmt'], { rows: 2, cols: 4 }), true])
+
+// ── DESIGN EDITOR HANDOFF (records -> intake Files) ────────────────────────
+const pngBlob = () => new Blob(['x'], { type: 'image/png' })
+check('handoff: named records keep names and order', (() => {
+  const files = handoffRecordsToFiles([
+    { name: 'page-01.png', blob: pngBlob() },
+    { name: 'page-02.png', blob: pngBlob() },
+    { name: 'page-03.png', blob: pngBlob() },
+  ])
+  return [files.length, files.map((f) => f.name).join(','), files[0].type]
+})(), [3, 'page-01.png,page-02.png,page-03.png', 'image/png'])
+check('handoff: missing/blank names get zero-padded fallback', (() => {
+  const records = Array.from({ length: 11 }, () => ({ blob: pngBlob() }))
+  records[0] = { blob: pngBlob(), name: 'cover.png' } // first keeps its name
+  const files = handoffRecordsToFiles(records)
+  return [files[0].name, files[1].name, files[9].name, files[10].name]
+})(), ['cover.png', 'editor-page-02.png', 'editor-page-10.png', 'editor-page-11.png'])
+check('handoff: blob-less records are skipped', (() => {
+  const files = handoffRecordsToFiles([
+    { name: 'a.png', blob: pngBlob() },
+    { name: 'ghost.png' },
+    null,
+    { name: 'b.png', blob: pngBlob() },
+  ])
+  return [files.length, files.map((f) => f.name).join(',')]
+})(), [2, 'a.png,b.png'])
+check('handoff: fallback name pads single digits', [
+  handoffFallbackName(0),
+  handoffFallbackName(8),
+  handoffFallbackName(99),
+], ['editor-page-01.png', 'editor-page-09.png', 'editor-page-100.png'])
 
 if (failures > 0) {
   console.error(`\n${failures} check(s) FAILED`)
