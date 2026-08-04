@@ -548,6 +548,23 @@ export default function MakeZine() {
               )}
             </SelectContent>
           </Select>
+          <div className="mt-3">
+            <Label className="font-mono text-xs uppercase tracking-wide">{t('common.orientation')}</Label>
+            <RadioGroup
+              value={zinePortrait ? 'portrait' : 'landscape'}
+              onValueChange={(v) => setZinePortrait(v === 'portrait')}
+              className="mt-1 flex gap-4"
+            >
+              <div className="flex items-center gap-2">
+                <RadioGroupItem value="portrait" id="ori-p" />
+                <Label htmlFor="ori-p" className="font-mono text-xs uppercase">{t('common.portrait')}</Label>
+              </div>
+              <div className="flex items-center gap-2">
+                <RadioGroupItem value="landscape" id="ori-l" />
+                <Label htmlFor="ori-l" className="font-mono text-xs uppercase">{t('common.landscape')}</Label>
+              </div>
+            </RadioGroup>
+          </div>
           {isHalf && (
             <p className="mt-2 border border-neutral-300 p-2 font-mono text-[11px] leading-relaxed text-neutral-600">
               {t('mz.halfNote')}
@@ -651,24 +668,6 @@ export default function MakeZine() {
                     ))}
                   </SelectContent>
                 </Select>
-              </div>
-
-              <div>
-                <Label className="font-mono text-xs uppercase tracking-wide">{t('common.orientation')}</Label>
-                <RadioGroup
-                  value={zinePortrait ? 'portrait' : 'landscape'}
-                  onValueChange={(v) => setZinePortrait(v === 'portrait')}
-                  className="mt-1 flex gap-4"
-                >
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="portrait" id="ori-p" />
-                    <Label htmlFor="ori-p" className="font-mono text-xs uppercase">{t('common.portrait')}</Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="landscape" id="ori-l" />
-                    <Label htmlFor="ori-l" className="font-mono text-xs uppercase">{t('common.landscape')}</Label>
-                  </div>
-                </RadioGroup>
               </div>
 
               {!isHalf && (
